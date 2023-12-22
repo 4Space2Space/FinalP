@@ -4,6 +4,7 @@ from colorama import Fore, Style, init
 from notes import Notes, Note, Tag, Body
 from sort import sort_fun
 import os.path
+import emoji
 
 init()
 
@@ -129,11 +130,11 @@ def add_birthday(args):
 
     if birthday:
         PHONE_BOOK[name].add_birthday(birthday)
-        return f" {birthday} was added to {name}"
+        return f" {birthday} 🎇 додано до {name}"
 
     user_birthday = input("Введіть ДН: ")
     PHONE_BOOK[name].add_birthday(user_birthday)
-    return f" {user_birthday} was added to {name}"
+    return f" {user_birthday} додано до {name}"
 
 
 @input_error
@@ -154,11 +155,11 @@ def add_email(args):
 
     if email:
         PHONE_BOOK[name].add_information(PHONE_BOOK[name].email_list, EmailContact(email))
-        return f" {email} was added to {name}"
+        return f" {email} додано до {name}"
 
     user_email = input("Введіть email: ")
     PHONE_BOOK[name].add_information(PHONE_BOOK[name].email_list, EmailContact(user_email))
-    return f" {user_email} was added to {name}"
+    return f" {user_email} додано до {name}"
 
 
 @input_error
@@ -447,7 +448,7 @@ def good_bye(*args):
     Функція для завершення роботи бота.
     """
     save()
-    print("See you latter")
+    print("👋🎅See you latter👋🎅")
     quit()
 
 
@@ -835,5 +836,5 @@ def show_logo():
     Логотип при запуску.
     """
     print("\n"
-            f"{Fore.CYAN}Вітання{Style.RESET_ALL} {Fore.RED}від {Style.RESET_ALL}{Fore.GREEN}команди{Style.RESET_ALL} {Fore.YELLOW}PyGeniuses{Style.RESET_ALL}\n")
+            f"👋🎅{Fore.CYAN}Вітання{Style.RESET_ALL} {Fore.RED}від {Style.RESET_ALL}{Fore.GREEN}команди{Style.RESET_ALL} {Fore.YELLOW}PyGeniuses{Style.RESET_ALL}👋🎅\n")
       
