@@ -448,7 +448,7 @@ def good_bye(*args):
     Функція для завершення роботи бота.
     """
     save()
-    print("👋🎅See you latter👋🎅")
+    print(f"👋🎅{Fore.CYAN}До побачення{Style.RESET_ALL}👋🎅")
     quit()
 
 
