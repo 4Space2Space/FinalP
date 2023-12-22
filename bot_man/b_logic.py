@@ -461,7 +461,7 @@ def helps(*args):
         f'{Fore.GREEN}add phone{Style.RESET_ALL} - will adding phone to contact in format add: [Name] [Phone]',
         f'{Fore.GREEN}add address{Style.RESET_ALL} - will adding new address to contact in format: [Name] [address]',
         f'{Fore.GREEN}add email{Style.RESET_ALL} - will adding new address to contact in format: [Name] [email]',
-        f'{Fore.GREEN}add birthday{Style.RESET_ALL} - will adding new address to contact in format: [Name] [birthday]',
+        f'{Fore.GREEN}add birthday{Style.RESET_ALL} - will adding new address to contact in format: [Name] [birthday][DD.MM.YYYY]',
         f'{Fore.GREEN}change address{Style.RESET_ALL} - will change address of you contact. format for change: [Name] [New address]',
         f'{Fore.GREEN}change email{Style.RESET_ALL} - will change email of you contact. format for change: [Name] [New email]',
         f'{Fore.GREEN}change phone{Style.RESET_ALL} - will change old phone with new value. format for change: [Name] [New phone]',
@@ -734,7 +734,7 @@ def min_fun(value):
                  'del phone', 'del phone', 'delete address', 'delete bd', 'delete bday', 'delete birthday',
                  'delete contact',
                  'delete email', 'delete note', 'delete phone', 'exit', 'good bye', 'hello', 'help', 'load', 'save',
-                 'search birthday', 'search contacts', 'search notes', 'search tag', 'show contact', 'show notes',
+                 'search birthday','search bday', 'search contacts', 'search notes', 'search tag', 'show contact', 'show notes',
                  'sort',
                  'sort notes']
 
@@ -819,6 +819,7 @@ def fun_name(fun):
         "delete email": delete_email,
         "del email": delete_email,
         "search birthday": search_birthday,
+        "search bday": search_birthday,
         "delete contact": delete_contact,
         "del contact": delete_contact,
         "delete address": delete_address,
